@@ -1,4 +1,18 @@
-* {
+* {:root {
+
+    color: #;
+    --primary-blue: #;
+
+    --light-blue: var(--light-blue)
+    ;
+    --dark-bg: #080c10;
+    --card-bg: #;var(--card-bg)
+
+    --text-light:;var(--text-light)
+
+
+}
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,19 +45,36 @@ nav {
 
 }
 
+.logo {
 
-}.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #38bdf8;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
 }
 
-.logo span {
-    display: block;
-    font-size: .9rem;
+
+.logo-main {
+
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    letter-spacing: 1px;
+
+}
+
+
+.logo-sub {
+
+    font-size: .85rem;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+
     text-transform: uppercase;
+
+}
+
 }
 
 
@@ -54,12 +85,53 @@ nav ul {
 }
 
 nav a {
+
     color: white;
     text-decoration: none;
+
+    font-weight: 600;
+    position: relative;
+
+    transition: color .3s ease;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary-blue);
+
+    transition: width .3s ease;
+
+}
+
+
+nav a:hover {
+
+    color: var(--primary-blue);
+
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+
+}
+
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: var(--primary-blue);
 }
 
 
@@ -189,7 +261,8 @@ section h2 {
 /* Contact */
 
 #contact {
-    background: #111820;
+    background: ;var(--card-bg)
+
 }
 
 
@@ -241,8 +314,12 @@ git status
 .hero-badge {
     display: inline-block;
     background: rgba(14, 165, 233, 0.15);
-    border: 1px solid #38bdf8;
-    color: #7dd3fc;
+    color: #;
+    border: 1px solid #var(--primary-blue)
+
+
+    color: ;var(--light-blue)
+
     padding: 8px 16px;
     border-radius: 999px;
     font-size: 0.95rem;
@@ -329,7 +406,8 @@ s.services-container {
 
 
 .service-card {
-    background: #111820;
+    background: #;var(--card-bg)
+
     padding: 30px;
     border-radius: 15px;
     text-align: center;
@@ -345,13 +423,18 @@ s.services-container {
 
 
 .service-card h3 {
-    color: #38bdf8;
+    color: #;
+    color: #var(--primary-blue)
+
+    var(--primary-blue)
+
     margin-bottom: 15px;
 }
 
 
 .service-card p {
-    color: #d1d5db;
+    color: ;var(--text-light)
+
     line-height: 1.6;
 }
 
@@ -384,7 +467,8 @@ s.services-container {
 
 .portfolio-item {
 
-    background: #111820;
+    background: var(--card-bg)
+    ;
     border-radius: 15px;
     overflow: hidden;
     transition: transform .3s ease;
@@ -411,7 +495,8 @@ s.services-container {
 .portfolio-item h3 {
 
     padding: 20px;
-    color: #38bdf8;
+    color: #;var(--primary-blue)
+
     text-align: center;
 
 }
@@ -437,7 +522,8 @@ s.services-container {
 
     text-align: center;
     padding: 80px 8%;
-    background: #111820;
+    background: var(--card-bg)
+    ;
 
 }
 
@@ -452,7 +538,8 @@ s.services-container {
 
 .contact-container p {
 
-    color: #d1d5db;
+    color: ;var(--text-light)
+
     max-width: 700px;
     margin: 10px auto;
 
@@ -469,7 +556,8 @@ s.services-container {
 
 .contact-info p {
 
-    color: #38bdf8;
+    color: var(--primary-blue)
+    ;
 
 }
 footer {
@@ -484,7 +572,8 @@ footer {
 
 .footer-content h3 {
 
-    color: #38bdf8;
+    color: var(--primary-blue)
+    ;
     margin-bottom: 10px;
 
 }
@@ -496,3 +585,146 @@ footer {
     margin: 8px;
 
 }
+git push
+#about {
+
+    padding: 80px 8%;
+    text-align: center;
+    background: #0b1220;
+
+}
+
+
+#about h2 {
+
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+
+}
+
+
+#about p {
+
+    max-width: 800px;
+    margin: 15px auto;
+    color: ;var(--text-light)
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+}#why {
+
+    padding: 80px 8%;
+    text-align: center;
+
+}
+
+
+#why h2 {
+
+    color: #;var(--primary-blue)
+
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+
+}
+
+
+.why-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+}
+
+
+.why-card {
+
+    background: ;var(--card-bg)
+
+    padding: 30px;
+    border-radius: 15px;
+
+    transition: transform .3s ease;
+
+}
+
+
+.why-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.why-card h3 {
+
+    color: ;var(--light-blue)
+
+    margin-bottom: 15px;
+
+}
+
+
+.why-card p {
+
+    color: var(--text-light)
+    ;
+    line-height: 1.6;
+
+}
+
+
+@media(max-width:900px){
+
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+#cta {
+
+    padding: 80px 8%;
+    text-align: center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.7),
+    rgba(0,0,0,.7)
+    ),
+    url("images/drone-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.cta-content {
+
+    max-width: 800px;
+    margin: auto;
+
+}
+
+
+.cta-content h2 {
+
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+
+.cta-content p {
+
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+
+}
+
